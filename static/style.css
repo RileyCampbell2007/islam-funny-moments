@@ -188,6 +188,11 @@ body {
     color: white;
 }
 
+.ytEmbed {
+    max-width: 100%;
+    min-width: 0px;
+}
+
 @media (max-width: 700px) {
     .navbar .left {
         display: none;
