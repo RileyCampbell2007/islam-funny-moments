@@ -1,3 +1,58 @@
-Welcome to <a href="https://islamfunnymoments.org">Islam Funny Moments</a>.
-
-Check out the <a href="https://www.youtube.com/@thegasstationtweakers">Gas Station Tweakers</a>.
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Islam Funny Moments</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="left">
+                <a class="hiddenLink" href="/"><h3>Islam Funny Moments</h3></a>
+            </div>
+            <div class="right">
+                <a href="/"><button class="button">Home</button></a>
+                <a href="/login"><button class="button">Login</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardContent">
+                <h1>Welcome to Islam Funny Moments</h1>
+                <hr>
+                <p>Home of the <a href="https://www.youtube.com/@thegasstationtweakers">Gas Station Tweakers</a>.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardContent">
+                <h1>What We Believe</h1>
+                <hr>
+                <p>Every member of our team shares on single common belief, that all issues can be solved with copious amounts of cocaine.</p>
+            </div>
+            <div class="cardContent">
+                <h1>What We Do</h1>
+                <hr>
+                <p>Crack.</p>
+            </div>
+        </div>
+        <div class="cardContent" style="position: fixed; bottom: 5px; left: 5px; padding: 5px;">
+            <input id="guiHider" type="checkbox">
+            <label for="guiHider">Hide UI</label>
+            <script>
+                document.getElementById('guiHider').addEventListener('click', () => {
+                    var hiderValue=document.getElementById('guiHider').checked
+                    if (hiderValue) {
+                        var UIElements = document.body.getElementsByClassName('card')
+                        for (let i=0; i<UIElements.length; i++) {
+                            UIElements[i].style['opacity']='0%'
+                        }
+                    } else {
+                        var UIElements = document.body.getElementsByClassName('card')
+                        for (let i=0; i<UIElements.length; i++) {
+                            UIElements[i].style['opacity']=''
+                        }
+                    }
+                })
+            </script>
+        </div>
+    </body>
+</html>

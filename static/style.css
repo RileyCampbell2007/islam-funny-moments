@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+body {
+    background-image: url('/static/images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #010015;
+    padding:0px;
+    margin:0px;
+}
+
+.card {
+    position: relative;
+    width: 75%;
+    margin: 0;
+    left:50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition-duration: 0.2s;
+}
+
+.cardContent {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.466);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    padding: 20px;
+    min-width: 0px;
+    margin:0;
+    /*width: 100%;*/
+    max-width: 100vw;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.cardContent:hover {
+    background-color: rgba(255, 255, 255, 0.574);;
+}
+
+.input {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-style: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px; 
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.input[type="text"],
+.input[type="password"], 
+.input[type="tel"] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+} 
+
+.input[type="tel"] {
+    background-image: url('/static/images/country_code.png') !important;
+    background-position: 10px 12px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    width: 85%
+} 
+
+.input[type="tel"]:-webkit-autofill {
+    background-image: url('/static/images/country_code.png') !important;
+}
+
+.input:focus {
+    outline: none;
+    border-style: solid;
+    border-color: #079bf7;
+    transform: scale(1.1);
+}
+
+.input[type="text"]:focus,
+.input[type="password"]:focus, 
+.input[type="tel"]:focus {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.button {
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-style: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px; 
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.button:hover {
+    border-style: solid;
+    border-color: #079bf7;
+    transform: scale(1.1);
+}
+
+.navbar {
+    height:60.44px;
+    z-index: 9999;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.466);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 0px;
+    margin:20px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 85%;
+    max-width: 100vw;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.navbar .left {
+    width: 100%;
+}
+
+.navbar .right {
+    width: 100%;
+    float:right;
+    text-align: right;
+}
+
+.navbar .button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar .button:hover {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hiddenLink {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 700px) {
+    .navbar .left {
+        display: none;
+    }
+    .navbar .right {
+        float: left;
+        text-align: left;
+    }
+}
+
