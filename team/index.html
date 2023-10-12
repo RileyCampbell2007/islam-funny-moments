@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Islam Funny Moments</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="left">
+                <h3><a class="hiddenLink" href="/">Islam Funny Moments</a></h3>
+            </div>
+            <div class="right">
+                <a href="/"><button class="button">Home</button></a>
+                <a href="/team"><button class="button">Team</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardContent">
+                <h1>Meet the Team</h1>
+                <hr>
+                <div style="width: 100%; margin-left:0px; margin-right:0px;" class="card">
+                    <div>
+                        <img src="/static/images/placeholder.jpg">
+                    </div>
+                    <div>
+                        <h1>Crack head One</h1>
+                        <hr>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div style="width: 100%; margin-left:0px; margin-right:0px;" class="card">
+                    <div>
+                        <img src="/static/images/placeholder.jpg">
+                    </div>
+                    <div>
+                        <h1>Crack head Two</h1>
+                        <hr>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardContent" style="position: fixed; bottom: 5px; left: 5px; padding: 5px;">
+            <input id="guiHider" type="checkbox">
+            <label for="guiHider">Hide UI</label>
+            <script>
+                document.getElementById('guiHider').addEventListener('click', () => {
+                    var hiderValue=document.getElementById('guiHider').checked
+                    if (hiderValue) {
+                        var UIElements = document.body.getElementsByClassName('card')
+                        for (let i=0; i<UIElements.length; i++) {
+                            UIElements[i].style['opacity']='0%'
+                        }
+                    } else {
+                        var UIElements = document.body.getElementsByClassName('card')
+                        for (let i=0; i<UIElements.length; i++) {
+                            UIElements[i].style['opacity']=''
+                        }
+                    }
+                })
+            </script>
+        </div>
+        <div class="copyright"><p>Copyright &copy; Riley Campbell 2023</p></div>
+    </body>
+</html>
