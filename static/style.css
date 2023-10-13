@@ -234,3 +234,12 @@ body {
     }
 }
 
+social {
+  font-style:italic;
+  font-family:monospace;
+  font-size:150%;
+  text-align:center;
+}
+desc {
+    font-size:125%
+}

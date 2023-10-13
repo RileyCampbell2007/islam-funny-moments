@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <title> Gas Station Tweakers </title>
+        <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="left">
+                <h3>
+                    <h3><a class="hiddenLink" href="/"><img src = "/static/images/favicon.png" width = 5% style= "margin: -1.3%; margin-left: .5%;"> </a></h3>
+                </h3>
+            </div>
+            <div class="right">
+                <a href="/"><button class="button">Home</button></a>
+                <a href="/team"><button class="button">Team</button></a>
+                <a href="/associates"><button class="button">Associates</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardContent">
+                <h1>Our Associates</h1>
+                <hr>
+                <div style="width: 100%; margin-left:0px; margin-right:0px;" class="card">
+                    <div class="invisibleCardContent">
+                       <a href = https://www.paradisewild.net><img class="cardIMG" src="/static/images/ParadiseWild.png" width = "50%" style=" margin-left: 25%; border-radius:18px;"> </a> 
+                    </div>
+                    <div class="invisibleCardContent">
+                        <h1>Paradise Wild</h1>
+                        <hr>
+                        <p>Paradise Wild is a clothing startup ran by metron0me, Choofy, and Tom Watson.<!--insert "meet the team" links as hyper links--> <a href="https://www.paradisewild.net/">Click to join the initiative</a>  </p>
+                    </div>
+                </div>
+                <div style="width: 100%; margin-left:0px; margin-right:0px;" class="card">
+                    <div class="invisibleCardContent">
+                        <a href = "https://www.cslabs3.com/"><img class="cardIMG" src="/static/images/CSLFAVICON.png" width="50%" style="margin-left:25%; border-radius:18px;"></a>
+                    </div>
+                    <div class="invisibleCardContent">
+                        <h1>CSLabs^3</h1>
+                        <hr>
+                        <p>CsLabs^3 is a Game Development Group ran by FOX, Bryce, and metron0me. Their leading game being a roblox Tactical Shooter called <a href = "https://www.roblox.com/games/11287185880/Evostrike-BETA">Evostrike.</a></p>
+                    </div>
+                    </div>
+                    <div style="width: 100%; margin-left:0px; margin-right:0px;" class="card">
+                        <div class="invisibleCardContent">
+                            <img class = cardIMG src="/static/images/BrokeBoys.png" width="50%" style="border-radius: 20px; margin-left:25%;">
+                        </div>
+                        <div class="invisibleCardContent">
+                            <h1>BrokeBoy$</h1>
+                            <hr>
+                            
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardContent" style="position: fixed; bottom: 5px; left: 5px; padding: 5px;">
+            <input id="guiHider" type="checkbox">
+            <label for="guiHider">Hide UI</label>
+            <script>
+                document.getElementById('guiHider').addEventListener('click', () => {
+                    var hiderValue=document.getElementById('guiHider').checked
+                    if (hiderValue) {
+                        var UIElements = document.body.getElementsByClassName('card')
+                        for (let i=0; i<UIElements.length; i++) {
+                            UIElements[i].style['opacity']='0%'
+                        }
+                    } else {
+                        var UIElements = document.body.getElementsByClassName('card')
+                        for (let i=0; i<UIElements.length; i++) {
+                            UIElements[i].style['opacity']=''
+                        }
+                    }
+                })
+            </script>
+        </div>
